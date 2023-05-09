@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>POKELIST</title>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/ion-colors.css">
+
+  <script defer src="src/js/funcoes.js"></script>
+  <script defer src="src/js/script.js"></script>
+</head>
+
+<body>
+  <ion-app>
+
+    <ion-header >
+      <ion-toolbar  class="ion-text-center" color="primary">
+        <ion-title class="fontePokemon">POKELIST</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content id="content" class="ion-padding" color="dark">
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>CONFIRA</ion-card-title>
+          <ion-card-subtitle>Uma lista completa de pokémons</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list id="listPokemon">
+            
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+
+
+
+
+
+      <ion-modal>
+        <ion-header>
+          <ion-toolbar color="primary">
+            <ion-title id="modalTitle" class="fontePokemon">POKÉMON</ion-title>
+            <ion-buttons slot="end">
+              <ion-button onclick="modal.isOpen = false">Fechar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding ion-text-center" color="dark">
+
+          <div id="idPokemon">
+            <h1>ID: <span id="idModal"></span></h1>
+          </div>
+
+          <div id="pokemonImg">
+            <div id="bolaBranca">
+              <img src="" alt="" id="imgModal">
+            </div>
+          </div>
+
+          <div id="divNomePokemon">
+            <h1 id="nomePokemon" style="text-transform:capitalize;"></h1>
+          </div>
+
+
+          <ion-row id="graphic">
+            <ion-col size="2">
+              <ion-row>
+                <ion-col size="12" class="graphic">
+                  <ion-col size="12" class="graphicHP contentGraphic">
+                    
+                  </ion-col>
+                </ion-col>
+                <ion-col size="12" class="fontGraphic">
+                  <span id="numberHPStatus"></span> <br>
+                  HP
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+            <ion-col size="2">
+              <ion-row>
+                <ion-col size="12" class="graphic">
+                  <ion-col size="12" class="graphicAttack contentGraphic">
+                    
+                  </ion-col>
+                </ion-col>
+                <ion-col size="12" class="fontGraphic">
+                  <span id="numberAttackStatus"></span> <br>
+                  Attack
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+            <ion-col size="2">
+              <ion-row>
+                <ion-col size="12" class="graphic">
+                  <ion-col size="12" class="graphicDefense contentGraphic">
+                    
+                  </ion-col>
+                </ion-col>
+                <ion-col size="12" class="fontGraphic">
+                  <span id="numberDefenseStatus"></span> <br>
+                  Defense
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+            <ion-col size="2">
+              <ion-row>
+                <ion-col size="12" class="graphic">
+                  <ion-col size="12" class="graphicSAttack contentGraphic">
+                    
+                  </ion-col>
+                </ion-col>
+                <ion-col size="12" class="fontGraphic">
+                  <span id="numberSAttackStatus"></span> <br>
+                  Special<br>Attack
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+            <ion-col size="2">
+              <ion-row>
+                <ion-col size="12" class="graphic">
+                  <ion-col size="12" class="graphicSDefense contentGraphic">
+                    
+                  </ion-col>
+                </ion-col>
+                <ion-col size="12" class="fontGraphic">
+                  <span id="numberSDefenseStatus"></span> <br>
+                  Special<br>Defense
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+            <ion-col size="2">
+              <ion-row>
+                <ion-col size="12" class="graphic">
+                  <ion-col size="12" class="graphicSpeed contentGraphic">
+                    
+                  </ion-col>
+                </ion-col>
+                <ion-col size="12" class="fontGraphic">
+                  <span id="numberSpeedStatus"></span> <br>
+                  Speed
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+          <div id="conteudo">
+            <div id="tipoModal">
+              Tipos: <br>
+              <span id="tipo"></span>
+            </div>
+
+            <br>
+
+            <div id="pesoModal">
+              Peso: <br>
+              <span id="peso"></span>
+            </div>
+
+            <br>
+
+            <div id="alturaModal">
+              Altura: <br>
+              <span id="altura"></span>
+            </div>
+
+            <br>
+
+            <div id="ataquesModal">
+              Ataques: <br>
+              <span id="ataques"></span>
+            </div>
+
+          </div>
+
+        </ion-content>
+      </ion-modal>
+
+    </ion-content>
+
+    <ion-footer>
+      <ion-toolbar class="ion-text-center" color="tertiary">
+        <ion-subtitle>Desenvolvido por: <br>Diogo Mello e Henry Giovani</ion-subtitle>
+      </ion-toolbar>
+    </ion-footer>
+
+  </ion-app>
+
+</body>
+
+</html>
